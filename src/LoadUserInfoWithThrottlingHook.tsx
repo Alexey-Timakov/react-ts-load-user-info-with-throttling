@@ -48,7 +48,12 @@ interface IUserInfoProps {
 function UserInfo({ user }: IUserInfoProps): JSX.Element {
 
   return (
-    <table>
+    <table
+      style={{
+        margin: "5rem auto",
+        width: "100%"
+      }}
+    >
       <thead>
         <tr>
           <th>Username</th>
@@ -104,7 +109,7 @@ export function LoadUserInfoWithThrottling(): JSX.Element {
 
   return (
     <div>
-      <header>Get a random user</header>
+      <header style={{ margin: "2rem" }}>Get a random user</header>
 
       <Button onClick={throttledAction} />
 
